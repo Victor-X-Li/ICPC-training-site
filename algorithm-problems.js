@@ -440,7 +440,7 @@
   {
     "id": "qoj20402",
     "url": "https://qoj.ac/problem/20402",
-    "title": "Floor is Lava / 熔岩路",
+    "title": "Floor is Lava",
     "platform": "QOJ",
     "origin": "CCC",
     "contest": "Canadian Computing Competition 2025 Senior · S4",
