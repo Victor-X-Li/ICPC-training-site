@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="zh-CN">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,6 +19,7 @@
   <script defer src="./engine.js"></script>
   <script defer src="./app.js"></script>
 </head>
+
 <body>
   <a class="skip-link" href="#results">跳到题目列表</a>
   <div class="shell">
@@ -27,18 +29,43 @@
       <nav id="topicNav" class="topic-nav" aria-label="按专题筛选"></nav>
     </aside>
     <main class="main-wrap">
-      <header class="topbar"><h1>ICPC 题单</h1></header>
+      <header class="topbar">
+        <h1>ICPC 题单</h1>
+      </header>
       <section class="workspace" aria-labelledby="listTitle">
-        <div class="workspace-header"><div class="list-heading"><h2 id="listTitle">全部题目</h2><span id="resultCount" class="count-pill" role="status" aria-live="polite"></span><span id="completionSummary" class="completion-summary" role="status" aria-live="polite"></span></div></div>
+        <div class="workspace-header">
+          <div class="list-heading">
+            <h2 id="listTitle">全部题目</h2><span id="resultCount" class="count-pill" role="status"
+              aria-live="polite"></span><span id="completionSummary" class="completion-summary" role="status"
+              aria-live="polite"></span>
+          </div>
+        </div>
         <div id="results" class="table-wrap" tabindex="-1">
-          <table><caption class="sr-only">题目、专题、来源和独立估算难度</caption><thead><tr><th class="completion-cell" scope="col">完成</th><th class="number-cell" scope="col">#</th><th scope="col">题目 · 专题</th><th scope="col">来源</th><th class="difficulty-cell" scope="col">估算 CF</th></tr></thead><tbody id="problemRows"></tbody></table>
-          <div id="emptyState" class="empty-state" hidden><h3>这个专题还没有题目。</h3></div>
+          <table>
+            <caption class="sr-only">题目、专题、来源和独立估算难度</caption>
+            <thead>
+              <tr>
+                <th class="completion-cell" scope="col">完成</th>
+                <th class="number-cell" scope="col">#</th>
+                <th scope="col">题目 · 专题</th>
+                <th scope="col">来源</th>
+                <th class="difficulty-cell" scope="col">估算 CF</th>
+              </tr>
+            </thead>
+            <tbody id="problemRows"></tbody>
+          </table>
+          <div id="emptyState" class="empty-state" hidden>
+            <h3>这个专题还没有题目。</h3>
+          </div>
         </div>
         <div class="table-footer"><span id="footerCount"></span></div>
       </section>
     </main>
   </div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <noscript><div class="noscript">请启用 JavaScript 以查看题目。</div></noscript>
+  <noscript>
+    <div class="noscript">请启用 JavaScript 以查看题目。</div>
+  </noscript>
 </body>
+
 </html>
