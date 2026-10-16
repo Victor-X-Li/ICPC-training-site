@@ -46,6 +46,19 @@
     const old = map.get(p.id); (old ? algorithmReusedIds : algorithmAddedIds).push(p.id);
     map.set(p.id, { ...(old || { classic: false, uncertainty: 200 }), ...p, collection: old?.collection || 'algorithms-2026-10', algorithm: true, subtopics: old?.collection === 'math-2026-10' ? old.subtopics : p.subtopics, algorithmSubtopics: p.subtopics, topics: [...new Set([...(old?.topics || []), ...p.topics])], verifiedAt: '2026-10-12' });
   }
+  const guideProblems = typeof module !== 'undefined' && module.exports
+    ? require('./guide-problems.js')
+    : root.GuideProblems;
+  const guideAddedIds = [];
+  for (const p of guideProblems) {
+    const old = map.get(p.id);
+    if (!old) guideAddedIds.push(p.id);
+    map.set(p.id, {
+      ...(old || {}),
+      ...p,
+      topics: [...new Set([...(old?.topics || []), ...p.topics])]
+    });
+  }
   const algorithmSyllabus = algorithmRoutes.flatMap(route => route.subtopics.map(name => ({ name, group: route.name, topic: route.topic, selected: true })));
   const topicAliases = {
     '最小生成树': 'MST', '图论与建模': '图论建模', '区间与单调结构': '区间结构',
@@ -56,7 +69,7 @@
   const problems = [...map.values()];
   for (const p of problems) p.topics = [...new Set(p.topics.map(t => topicAliases[t] || t))];
   for (const route of algorithmRoutes) route.topic = topicAliases[route.topic] || route.topic;
-  const data = { problems, syllabus, algorithmRoutes, algorithmSyllabus, algorithmAddedIds, algorithmReusedIds, topics, topicAliases, sources: [...new Set(['Codeforces', 'AtCoder', 'QOJ', 'ICPC', ...[...sourceProblems, ...algorithms].flatMap(p => [p.platform, p.origin, ...(p.sourceTags || [])])])], verifiedAt: '2026-10-12' };
+  const data = { problems, syllabus, algorithmRoutes, algorithmSyllabus, algorithmAddedIds, algorithmReusedIds, guideAddedIds, topics, topicAliases, sources: [...new Set(['Codeforces', 'AtCoder', 'QOJ', 'ICPC', ...[...sourceProblems, ...algorithms, ...guideProblems].flatMap(p => [p.platform, p.origin, ...(p.sourceTags || [])])])], verifiedAt: '2026-10-12', updatedAt: '2026-10-16' };
   if (typeof module !== 'undefined' && module.exports) module.exports = data;
   else root.ProblemData = data;
 })(typeof globalThis !== 'undefined' ? globalThis : this);
