@@ -87,7 +87,19 @@
         "桥与割点",
         "DFS 树上的构造"
       ]
+    },
+    {
+      "name": "Tarjan",
+      "topic": "Tarjan",
+      "summary": "已掌握四类模板后的性质、建模与证明训练，含圆方树和桥森林的静态应用。",
+      "subtopics": [
+        "割点",
+        "割边",
+        "点双连通分量（圆方树）",
+        "边双连通分量"
+      ]
     }
   ];
   if (typeof module !== "undefined" && module.exports) module.exports = routes; else root.AlgorithmRoutes = routes;
 })(typeof globalThis !== "undefined" ? globalThis : this);
+
