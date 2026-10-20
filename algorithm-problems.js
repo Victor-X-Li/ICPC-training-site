@@ -2416,6 +2416,49 @@
         "section": 7
       }
     ]
+  },
+  {
+    "id": "cf916e",
+    "title": "Jamie and Tree",
+    "url": "https://codeforces.com/problemset/problem/916/E",
+    "platform": "Codeforces",
+    "origin": "Codeforces",
+    "contest": "Codeforces Round 457 (Div. 2) · E",
+    "originalContest": "Codeforces Round 457 (Div. 2)",
+    "year": 2018,
+    "estimate": 2400,
+    "topics": [
+      "LCA"
+    ],
+    "subtopics": [
+      "换根 LCA",
+      "换根子树",
+      "子树修改与查询"
+    ],
+    "requirements": [
+      "lca",
+      "binary-lifting",
+      "dfs-order",
+      "rerooted-subtrees",
+      "range-add-range-sum",
+      "64-bit-arithmetic"
+    ],
+    "reason": "结合换根后的祖先与子树性质完成在线修改和查询，练习分类的完整性及结构不变量。",
+    "estimateBasis": "独立估算约 2400：需要同时处理换根 LCA 与换根子树的语义，再与区间维护衔接；思维跨度适中，边界分类和实现负担较高。",
+    "selectionNote": "用户指定加入的 2018 年 CF 题，用于 LCA 性质的综合应用训练。",
+    "sourceTags": [
+      "Codeforces"
+    ],
+    "classic": true,
+    "uncertainty": 200,
+    "verifiedAt": "2026-10-20",
+    "sourceVerifiedAt": "2026-10-20",
+    "editorialUrl": "https://codeforces.com/blog/entry/57223",
+    "evidence": [
+      "https://codeforces.com/problemset/problem/916/E",
+      "https://codeforces.com/blog/entry/57223?locale=en",
+      "https://codeforces.com/blog/entry/57192"
+    ]
   }
 ];
   if (typeof module !== "undefined" && module.exports) module.exports = problems;
