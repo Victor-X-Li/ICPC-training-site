@@ -79,7 +79,7 @@
     '动态规划与树': '动态规划', '容斥': '容斥原理', '最短路拓展': '最短路',
     '01 Trie与二进制': '01 Trie', 'DFS拓展': 'DFS 及其应用'
   };
-  const topics = ['并查集', 'MST', '图论建模', '区间结构', '数论', '组合数学', '动态规划', '容斥原理', '优化建图', '最短路', '笛卡尔树与单调栈', '线性基', '01 Trie', 'DFS 及其应用', 'Tarjan'];
+  const topics = ['并查集', 'MST', '图论建模', '区间结构', '数论', '组合数学', '动态规划', '容斥原理', '优化建图', '最短路', '笛卡尔树与单调栈', '线性基', '01 Trie', 'DFS 及其应用', 'Tarjan', '数学期望', '字符串哈希', 'LCA'];
   const problems = [...map.values()];
   for (const p of problems) p.topics = [...new Set(p.topics.map(t => topicAliases[t] || t))];
   for (const route of algorithmRoutes) route.topic = topicAliases[route.topic] || route.topic;
@@ -105,9 +105,8 @@
       ].flatMap(p => [p.platform, p.origin, ...(p.sourceTags || [])])
     ])],
     verifiedAt: '2026-10-12',
-    updatedAt: '2026-10-19'
+    updatedAt: '2026-10-20'
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = data;
   else root.ProblemData = data;
 })(typeof globalThis !== 'undefined' ? globalThis : this);
-
