@@ -2459,6 +2459,130 @@
       "https://codeforces.com/blog/entry/57223?locale=en",
       "https://codeforces.com/blog/entry/57192"
     ]
+  },
+  {
+    "id": "cf981c",
+    "title": "Useful Decomposition",
+    "url": "https://codeforces.com/problemset/problem/981/C",
+    "platform": "Codeforces",
+    "origin": "Codeforces",
+    "contest": "Avito Code Challenge 2018 · C",
+    "originalContest": "Avito Code Challenge 2018",
+    "year": 2018,
+    "estimate": 1500,
+    "topics": [
+      "LCA",
+      "Helly 性质"
+    ],
+    "requirements": [
+      "tree-paths",
+      "constructive-algorithms",
+      "degree-analysis"
+    ],
+    "reason": "从两两相交的路径分解出发，练习树上公共点性质与构造的必要性证明。",
+    "estimateBasis": "独立估算约 1500：识别公共点约束并推出可构造条件，证明简短、实现轻量，适合作为热身。",
+    "selectionNote": "用户审核后指定加入的 2018 年 CF 题；LCA 标签用于归入树上路径性质专题，本题无需实现 LCA。",
+    "sourceTags": [
+      "Codeforces"
+    ],
+    "classic": true,
+    "uncertainty": 200,
+    "verifiedAt": "2026-10-21",
+    "sourceVerifiedAt": "2026-10-21",
+    "evidence": [
+      "https://codeforces.com/problemset/problem/981/C"
+    ],
+    "notesPractice": true,
+    "notesSections": [
+      {
+        "file": "lca-properties.md",
+        "section": 3
+      }
+    ]
+  },
+  {
+    "id": "qoj7009",
+    "title": "Rikka with Intersections of Paths",
+    "url": "https://qoj.ac/problem/7009",
+    "platform": "QOJ",
+    "origin": "ICPC",
+    "contest": "ICPC 2018 · Xuzhou Regional",
+    "originalContest": "The 2018 ICPC Asia Xuzhou Regional Programming Contest",
+    "year": 2018,
+    "estimate": 2400,
+    "topics": [
+      "LCA",
+      "Helly 性质"
+    ],
+    "requirements": [
+      "lca",
+      "tree-difference",
+      "combinations",
+      "modular-arithmetic"
+    ],
+    "reason": "从路径族存在公共点推进到选择路径组的计数，练习树上交集结构与不重不漏的统计。",
+    "estimateBasis": "独立估算约 2400：需要组织公共交集的唯一计数归属，并结合 LCA、树上统计与组合数，思维和实现均有一定负担。",
+    "selectionNote": "用户审核后保留的旧题例外：2018 年 ICPC 徐州站，直接承接树的 Helly 性质与多路径公共点计数。",
+    "sourceTags": [
+      "ICPC",
+      "QOJ"
+    ],
+    "classic": true,
+    "uncertainty": 200,
+    "verifiedAt": "2026-10-21",
+    "sourceVerifiedAt": "2026-10-21",
+    "evidence": [
+      "https://qoj.ac/problem/7009",
+      "https://qoj.ac/download.php?id=7009&type=statement"
+    ],
+    "notesPractice": true,
+    "notesSections": [
+      {
+        "file": "lca-properties.md",
+        "section": 3
+      }
+    ]
+  },
+  {
+    "id": "cf1486f",
+    "title": "Pairs of Paths",
+    "url": "https://codeforces.com/problemset/problem/1486/F",
+    "platform": "Codeforces",
+    "origin": "Codeforces",
+    "contest": "Codeforces Round 703 (Div. 2) · F",
+    "originalContest": "Codeforces Round 703 (Div. 2)",
+    "year": 2021,
+    "estimate": 2600,
+    "topics": [
+      "LCA",
+      "Helly 性质"
+    ],
+    "requirements": [
+      "lca",
+      "tree-path-counting",
+      "inclusion-exclusion",
+      "64-bit-arithmetic"
+    ],
+    "reason": "统计交集恰为一个节点的路径对，练习路径交集结构与精细计数，作为本专题的提高题。",
+    "estimateBasis": "独立估算约 2600：需要区分路径相交的不同结构并处理重复统计，边界分类较细，实现与计数证明负担较高。",
+    "selectionNote": "用户审核后指定加入；属于路径交集计数拓展，并非直接套用多路径 Helly 性质。",
+    "sourceTags": [
+      "Codeforces"
+    ],
+    "classic": false,
+    "uncertainty": 200,
+    "verifiedAt": "2026-10-21",
+    "sourceVerifiedAt": "2026-10-21",
+    "evidence": [
+      "https://codeforces.com/problemset/problem/1486/F"
+    ],
+    "notesPractice": true,
+    "notesSections": [
+      {
+        "file": "lca-properties.md",
+        "section": 3
+      }
+    ]
   }
 ];
   if (typeof module !== "undefined" && module.exports) module.exports = problems;
