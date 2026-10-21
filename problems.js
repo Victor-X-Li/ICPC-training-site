@@ -20,7 +20,6 @@
     ['cf2044f', 'Easy Demon Problem', 'Codeforces', 'CF 2044F', 2024, 1900, ['数论'], 'https://codeforces.com/problemset/problem/2044/F'],
     ['abc360_e', 'Random Swaps of Balls', 'AtCoder', 'ABC 360 · E', 2024, 1800, ['组合数学'], 'https://atcoder.jp/contests/abc360/tasks/abc360_e'],
     ['abc358_e', 'Alphabet Tiles', 'AtCoder', 'ABC 358 · E', 2024, 2000, ['组合数学', '动态规划与树'], 'https://atcoder.jp/contests/abc358/tasks/abc358_e'],
-    ['cf2000e', 'Photoshoot for Gorillas', 'Codeforces', 'CF 2000E', 2024, 1600, ['组合数学'], 'https://codeforces.com/problemset/problem/2000/E'],
     ['abc359_d', 'Avoid K Palindrome', 'AtCoder', 'ABC 359 · D', 2024, 1900, ['动态规划与树'], 'https://atcoder.jp/contests/abc359/tasks/abc359_d'],
     ['cf1997d', 'Maximize the Root', 'Codeforces', 'CF 1997D', 2024, 1800, ['动态规划与树'], 'https://codeforces.com/problemset/problem/1997/D'],
     ['abc379_f', 'Buildings 2', 'AtCoder', 'ABC 379 · F', 2024, 2200, ['区间与单调结构'], 'https://atcoder.jp/contests/abc379/tasks/abc379_f'],
@@ -45,19 +44,6 @@
   for (const p of algorithms) {
     const old = map.get(p.id); (old ? algorithmReusedIds : algorithmAddedIds).push(p.id);
     map.set(p.id, { ...(old || { classic: false, uncertainty: 200 }), ...p, collection: old?.collection || 'algorithms-2026-10', algorithm: true, subtopics: old?.collection === 'math-2026-10' ? old.subtopics : p.subtopics, algorithmSubtopics: p.subtopics, topics: [...new Set([...(old?.topics || []), ...p.topics])], verifiedAt: '2026-10-12' });
-  }
-  const guideProblems = typeof module !== 'undefined' && module.exports
-    ? require('./guide-problems.js')
-    : root.GuideProblems;
-  const guideAddedIds = [];
-  for (const p of guideProblems) {
-    const old = map.get(p.id);
-    if (!old) guideAddedIds.push(p.id);
-    map.set(p.id, {
-      ...(old || {}),
-      ...p,
-      topics: [...new Set([...(old?.topics || []), ...p.topics])]
-    });
   }
   const tarjanProblems = typeof module !== 'undefined' && module.exports
     ? require('./tarjan-problems.js')
@@ -90,7 +76,6 @@
     algorithmSyllabus,
     algorithmAddedIds,
     algorithmReusedIds,
-    guideAddedIds,
     tarjanAddedIds,
     tarjanReusedIds,
     topics,
@@ -100,7 +85,6 @@
       ...[
         ...sourceProblems,
         ...algorithms,
-        ...guideProblems,
         ...tarjanProblems.filter(p => p.title)
       ].flatMap(p => [p.platform, p.origin, ...(p.sourceTags || [])])
     ])],

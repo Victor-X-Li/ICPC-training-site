@@ -2,32 +2,6 @@
 (function (root) {
   const problems = [
     {
-      "id": "cf2000e",
-      "title": "Photoshoot for Gorillas",
-      "url": "https://codeforces.com/contest/2000/problem/E",
-      "platform": "Codeforces",
-      "year": 2024,
-      "estimate": 1500,
-      "subtopics": [
-        "双计数与对象转换"
-      ],
-      "requirements": [
-        "贡献计数",
-        "排序",
-        "基础贪心"
-      ],
-      "reason": "训练把大量重叠对象的总和改写为局部贡献，并证明最优安排。",
-      "origin": "Codeforces",
-      "originalContest": "Codeforces Round 966 (Div. 3)",
-      "contest": "Codeforces Round 966 (Div. 3) · CF2000E",
-      "topics": [
-        "组合数学"
-      ],
-      "classic": false,
-      "uncertainty": 200,
-      "verifiedAt": "2026-10-12"
-    },
-    {
       "id": "abc280_d",
       "title": "Factorial and Multiple",
       "url": "https://atcoder.jp/contests/abc280/tasks/abc280_d",

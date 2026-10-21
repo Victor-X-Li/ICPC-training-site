@@ -1972,55 +1972,6 @@
     ]
   },
   {
-    "id": "cf1627e",
-    "title": "Not Escaping",
-    "url": "https://codeforces.com/problemset/problem/1627/E",
-    "platform": "Codeforces",
-    "origin": "Codeforces",
-    "contest": "CF Round 766 · E",
-    "originalContest": "Codeforces Round 766 (Div. 2) — E",
-    "year": 2022,
-    "estimate": 2300,
-    "topics": [
-      "最短路",
-      "优化建图",
-      "动态规划"
-    ],
-    "subtopics": [
-      "辅助节点与压缩建图",
-      "分层最短路"
-    ],
-    "requirements": [
-      "coordinate-compression",
-      "sparse-graph",
-      "row-dp",
-      "negative-edges",
-      "two-sweeps",
-      "int64"
-    ],
-    "reason": "重点是控制状态规模，并利用结构处理含收益的转移。",
-    "estimateBasis": "需要压缩关键位置并证明逐层处理和层内转移的正确性；实现包含稀疏状态与不可达边界。",
-    "guideUrl": "https://usaco.guide/gold/shortest-paths",
-    "editorialUrl": "https://codeforces.com/blog/entry/99067",
-    "collection": "usaco-guide-2026-10",
-    "discoverySource": "USACO Guide",
-    "classic": false,
-    "uncertainty": 200,
-    "verifiedAt": "2026-10-16",
-    "evidence": [
-      "https://usaco.guide/gold/shortest-paths",
-      "https://codeforces.com/problemset/problem/1627/E",
-      "https://codeforces.com/blog/entry/99067"
-    ],
-    "notesPractice": true,
-    "notesSections": [
-      {
-        "file": "graph-modeling.md",
-        "section": 3
-      }
-    ]
-  },
-  {
     "id": "abc277_e",
     "title": "Crystal Switches",
     "estimate": 1900,
